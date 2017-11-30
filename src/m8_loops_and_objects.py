@@ -6,16 +6,24 @@ This module demonstrates simple LOOPS of the form:
 and also USING OBJECTS.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Sydney Larson.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
+import math
 
 
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
-
+    print_sequence1()
+    draw_circles1()
+    print_sequence2()
+    draw_circles2()
+    print_sequence3()
+    draw_circles3()
+    print_cosines()
+    draw_cosines_and_sines()
 
 def print_sequence1():
     """
@@ -37,7 +45,10 @@ def print_sequence1():
     print('--------------------------------------------------')
     print('Running print_sequence1:')
     print('--------------------------------------------------')
-
+    k = 0
+    for x in range(21):
+        print(k)
+        k = k + 10
 
 def draw_circles1():
     """
@@ -57,7 +68,15 @@ def draw_circles1():
     print('--------------------------------------------------')
     print('Running draw_circles1:  See graphics window')
     print('--------------------------------------------------')
-
+    window = rg.RoseWindow(400,400)
+    center = rg.Point(200,200)
+    rad = 0
+    for x in range (21):
+        circ = rg.Circle(center,rad)
+        rad = rad + 10
+        circ.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
 
 def print_sequence2():
     """
@@ -79,6 +98,10 @@ def print_sequence2():
     print('--------------------------------------------------')
     print('Running print_sequence2:')
     print('--------------------------------------------------')
+    k = 50
+    for x in range(18):
+        print(k)
+        k = k + 20
 
 
 def draw_circles2():
@@ -100,6 +123,16 @@ def draw_circles2():
     print('--------------------------------------------------')
     print('Running draw_circles2:  See graphics window')
     print('--------------------------------------------------')
+    window = rg.RoseWindow(400,400)
+    center = rg.Point(50,100)
+    rad = 10
+    for x in range (17):
+        circ = rg.Circle(center,rad)
+        circ.fill_color = 'blue'
+        center.x = center.x + 20
+        circ.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
 
 
 def print_sequence3():
@@ -121,6 +154,10 @@ def print_sequence3():
     print('--------------------------------------------------')
     print('Running print_sequence3:')
     print('--------------------------------------------------')
+    k = 1
+    for x in range(100):
+        print(k)
+        k = k + 1
 
 
 def draw_circles3():
@@ -140,6 +177,15 @@ def draw_circles3():
     print('--------------------------------------------------')
     print('Running draw_circles3:  See graphics window')
     print('--------------------------------------------------')
+    window = rg.RoseWindow(300,300)
+    center = rg.Point(200,150)
+    rad = 1
+    for x in range (100):
+        circ = rg.Circle(center,rad)
+        rad = rad + 1
+        circ.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
 
 
 def print_cosines():
@@ -176,6 +222,10 @@ def print_cosines():
     print('--------------------------------------------------')
     print('Running print_cosines:')
     print('--------------------------------------------------')
+    k = 0
+    for x in range(101):
+        print(80 * math.cos(k))
+        k = k + 1
 
 
 def draw_cosines_and_sines():
@@ -201,7 +251,18 @@ def draw_cosines_and_sines():
     print('--------------------------------------------------')
     print('Running draw_cosines_and_sines:  See graphics window')
     print('--------------------------------------------------')
-
+    window = rg.RoseWindow(400,400)
+    rad = 10
+    k=0
+    for x in range (101):
+        centx = 200+ (80*math.cos(k))
+        centy = 200+ (80*math.sin(k))
+        center = rg.Point(centx,centy)
+        circ = rg.Circle(center,rad)
+        k = k + 1
+        circ.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
 
 # ----------------------------------------------------------------------
 # If this module is running at the top level (as opposed to being

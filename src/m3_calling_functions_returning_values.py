@@ -74,19 +74,19 @@ def run_test_sum_of_digits():
     # Test 2:
     expected = 12
     answer = sum_of_digits(345)
-    print('Test 1 expected:', expected)
+    print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
     # Test 3:
     expected = 14
     answer = sum_of_digits(752)
-    print('Test 1 expected:', expected)
+    print('Test 3 expected:', expected)
     print('       actual:  ', answer)
 
     # Test 4:
     expected = 7
     answer = sum_of_digits(1231)
-    print('Test 1 expected:', expected)
+    print('Test 4 expected:', expected)
     print('       actual:  ', answer)
 
 def sum_of_digits(number):
@@ -159,13 +159,13 @@ def run_test_digits_in_cube():
     # Test 2:
     expected = 8
     answer = digits_in_cube(5)
-    print('Test 1 expected:', expected)
+    print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
     # Test 3:
     expected = 10
     answer = digits_in_cube(7)
-    print('Test 1 expected:', expected)
+    print('Test 3 expected:', expected)
     print('       actual:  ', answer)
 
 
@@ -217,13 +217,13 @@ def run_test_digits_in_power():
     # Test 2:
     expected = 7
     answer = digits_in_power(4,5)
-    print('Test 1 expected:', expected)
+    print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
     # Test 3:
     expected = 9
     answer = digits_in_power(3,2)
-    print('Test 1 expected:', expected)
+    print('Test 3 expected:', expected)
     print('       actual:  ', answer)
 
 
@@ -276,13 +276,13 @@ def run_test_fancy_sums_of_digits():
     # Test 2:
     expected = 40639
     answer = fancy_sums_of_digits(4)
-    print('Test 1 expected:', expected)
+    print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
     # Test 3:
     expected = 105595
     answer = fancy_sums_of_digits(23)
-    print('Test 1 expected:', expected)
+    print('Test 3 expected:', expected)
     print('       actual:  ', answer)
 
     # ------------------------------------------------------------------
